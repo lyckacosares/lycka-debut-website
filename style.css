@@ -1,141 +1,986 @@
+/* ===========================
+   LC XVIII
+   Luxury Debut Invitation
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
 html{
     scroll-behavior:smooth;
 }
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
 
 body{
-
-font-family:Poppins,sans-serif;
-
-background:#FFF9F7;
-
+    font-family:'Poppins',sans-serif;
+    background:#FAF8F6;
+    color:#564A45;
+    overflow-x:hidden;
 }
 
-nav{
+section{
+    padding:100px 8%;
+}
 
-display:flex;
+h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:52px;
+    color:#B7848D;
+    text-align:center;
+    margin-bottom:60px;
+    position:relative;
 
-justify-content:space-between;
+    display:inline-block;
 
-align-items:center;
+    padding-bottom:10px;
 
-padding:25px 80px;
+    h2::after{
 
-background:white;
+    content:"";
 
-box-shadow:0 2px 12px rgba(0,0,0,.05);
+    position:absolute;
 
+    left:50%;
+
+    transform:translateX(-50%);
+
+    bottom:0;
+
+    width:65px;
+
+    height:2px;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+        to right,
+        transparent,
+        #d8a8b3,
+        transparent
+    );
+
+}
+}
+
+/* ================= NAVBAR ================= */
+
+nav a{
+    position:relative;
+    text-decoration:none;
+    color:#8b6a63;
+    font-weight:500;
+    letter-spacing:2px;
+    transition:.35s;
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    bottom:-6px;
+    width:0;
+    height:1px;
+    background:#c08a96;
+    transition:.35s;
+    transform:translateX(-50%);
+}
+
+nav a:hover{
+    color:#c08a96;
+}
+
+nav a:hover::after{
+    width:100%;
 }
 
 .logo{
-
-font-size:28px;
-
-font-family:"Cormorant Garamond",serif;
-
-color:#B76E79;
-
-font-weight:bold;
-
+    font-family:'Cormorant Garamond',serif;
+    font-size:32px;
+    letter-spacing:6px;
+    color:#B7848D;
 }
 
 .menu{
 
-display:flex;
-
-gap:30px;
+gap:45px;
 
 }
 
 .menu a{
 
-text-decoration:none;
+letter-spacing:2px;
 
-color:#8b6d5c;
-
-font-weight:500;
+font-size:14px;
 
 }
+
+/* ================= HERO ================= */
 
 .hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
 
-height:90vh;
+.chapter{
+    letter-spacing:8px;
+    color:#B7848D;
+    font-size:14px;
+    text-transform:uppercase;
+}
 
-display:flex;
+.hero h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:88px;
+    color:#453B37;
+    margin:20px 0;
+}
 
-justify-content:center;
+.tagline{
+    font-size:22px;
+    color:#7A706C;
+}
 
-align-items:center;
+.event-date{
+    margin-top:30px;
+    letter-spacing:2px;
+    color:#8E817C;
+}
 
-flex-direction:column;
+.btn{
+    display:inline-block;
+    margin-top:50px;
+    padding:16px 42px;
+    border:1px solid #B7848D;
+    border-radius:50px;
+    text-decoration:none;
+    color:#B7848D;
+    transition:all .35s ease;
+}
 
-text-align:center;
+.btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 18px 45px rgba(0,0,0,.08);
 
 }
 
-.subtitle{
+/* ================= COUNTDOWN ================= */
 
-letter-spacing:4px;
-
-text-transform:uppercase;
-
-color:#9c8a7a;
-
-margin-bottom:15px;
-
+.countdown{
+    background:#FFFFFF;
 }
 
-h1{
+.countdown-box{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+    gap:25px;
+    max-width:900px;
+    margin:auto;
+}
 
-font-size:80px;
+.time{
+    background:#FAF8F6;
+    border:1px solid #EFE6E2;
+    border-radius:22px;
+    padding:35px 20px;
+    text-align:center;
+    transition:.35s;
+}
 
-font-family:"Cormorant Garamond",serif;
+.time:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
 
-color:#B76E79;
+.time h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:58px;
+    color:#B7848D;
+}
 
+.time span{
+    display:block;
+    margin-top:8px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    font-size:13px;
+    color:#8B817C;
+}
+
+/* ================= DETAILS ================= */
+
+.details{
+    background:#FAF8F6;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:22px;
+    padding:40px 25px;
+    text-align:center;
+    transition:.35s;
+    border:1px solid #F0E8E4;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 18px 35px rgba(0,0,0,.08);
+}
+
+.card h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:30px;
+    color:#B7848D;
+    margin-bottom:12px;
+}
+
+.card p{
+    color:#6D615B;
+    font-size:16px;
+    line-height:1.7;
+}
+
+/* ================= PROGRAM ================= */
+
+.program{
+    background:#FFFFFF;
+}
+
+.timeline{
+    max-width:700px;
+    margin:auto;
+    position:relative;
+    padding-left:30px;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    left:8px;
+    top:0;
+    width:2px;
+    height:100%;
+    background:#E7D7D0;
+}
+
+.timeline div{
+    position:relative;
+    background:#FAF8F6;
+    padding:18px 25px;
+    margin-bottom:22px;
+    border-radius:18px;
+    border:1px solid #EFE5E1;
+    transition:.3s;
+}
+
+.timeline div::before{
+    content:"";
+    position:absolute;
+    left:-31px;
+    top:24px;
+    width:16px;
+    height:16px;
+    border-radius:50%;
+    background:#B7848D;
+}
+
+.timeline div:hover{
+    transform:translateX(8px);
+    box-shadow:0 15px 30px rgba(0,0,0,.08);
+}
+
+/* ================= VENUE ================= */
+
+.venue{
+    background:#FAF8F6;
+    text-align:center;
+}
+
+.venue p{
+    font-size:20px;
+    color:#6D615B;
+    margin-top:15px;
+}
+
+/* ================= MESSAGE ================= */
+
+.message{
+    background:#FFFFFF;
+    text-align:center;
+}
+
+.message p{
+    max-width:650px;
+    margin:auto;
+    color:#6D615B;
+    line-height:1.9;
+    margin-bottom:40px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#FAF8F6;
+    text-align:center;
+    padding:80px 20px;
+    border-top:1px solid #EFE5E1;
+}
+
+footer h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:46px;
+    color:#B7848D;
+    margin-bottom:20px;
+}
+
+footer p{
+    max-width:650px;
+    margin:auto;
+    line-height:1.8;
+    color:#6D615B;
+}
+
+.copyright{
+    margin-top:35px;
+    font-size:14px;
+    letter-spacing:2px;
+    color:#9A8D87;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+nav{
+    flex-direction:column;
+    gap:20px;
+}
+
+nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:18px;
+}
+
+.hero h1{
+    font-size:56px;
+}
+
+.tagline{
+    font-size:18px;
 }
 
 h2{
+    font-size:38px;
+}
 
-font-size:35px;
+.time h3{
+    font-size:42px;
+}
 
-font-weight:300;
+}
 
-margin-top:10px;
+/* =======================
+        VENUE
+======================= */
+
+.venue{
+    padding:120px 10%;
+    background:#FFF9F7;
+    text-align:center;
+}
+
+.venue h2{
+    font-family:"Cormorant Garamond", serif;
+    font-size:60px;
+    color:#B88A95;
+    margin-bottom:60px;
+}
+
+.venue-card{
+    max-width:650px;
+    margin:auto;
+    background:white;
+    padding:60px;
+    border-radius:25px;
+    box-shadow:0 15px 40px rgba(0,0,0,.06);
+}
+
+.venue-card h3{
+    font-size:32px;
+    color:#5f4d4d;
+    margin-bottom:20px;
+    font-family:"Cormorant Garamond", serif;
+}
+
+.venue-card p{
+    color:#777;
+    line-height:1.9;
+    font-size:18px;
+}
+
+.venue-note{
+    margin-top:30px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:#B88A95;
+    font-size:15px;
+}
+
+/* =======================
+      BIRTHDAY WISHES
+======================= */
+
+.message{
+    padding:120px 10%;
+    background:#ffffff;
+    text-align:center;
+}
+
+.message h2{
+    font-family:"Cormorant Garamond", serif;
+    font-size:60px;
+    color:#B88A95;
+    margin-bottom:25px;
+}
+
+.message p{
+    max-width:650px;
+    margin:auto;
+    color:#777;
+    font-size:18px;
+    line-height:1.9;
+    margin-bottom:45px;
+}
+
+.wish-btn{
+    display:inline-block;
+    padding:16px 45px;
+    border:1px solid #C9A3AE;
+    border-radius:50px;
+    text-decoration:none;
+    color:#B88A95;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    transition:.35s;
+}
+
+.wish-btn:hover{
+    background:#B88A95;
+    color:white;
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(184,138,149,.25);
+}
+
+/* =======================
+          FOOTER
+======================= */
+
+footer{
+    padding:100px 10%;
+    background:#FFF9F7;
+    text-align:center;
+}
+
+footer h2{
+    font-family:"Cormorant Garamond", serif;
+    font-size:55px;
+    color:#B88A95;
+    margin-bottom:25px;
+}
+
+footer p{
+    max-width:650px;
+    margin:auto;
+    color:#777;
+    line-height:1.9;
+    margin-bottom:35px;
+}
+
+.divider{
+    width:90px;
+    height:1px;
+    background:#D8B8C0;
+    margin:35px auto;
+}
+
+footer small{
+    color:#999;
+    letter-spacing:2px;
+    line-height:2;
+}
+
+footer strong{
+    color:#B88A95;
+    font-size:18px;
+}
+
+.program{
+    padding:120px 10%;
+    background:#ffffff;
+    text-align:center;
+}
+
+.program h2{
+    font-size:60px;
+    font-family:"Cormorant Garamond",serif;
+    color:#BE8F95;
+    margin-bottom:10px;
+}
+
+.program-divider{
+    color:#D6A5AD;
+    letter-spacing:8px;
+    font-size:18px;
+    margin-bottom:40px;
+}
+
+.program-card{
+    max-width:650px;
+    margin:auto;
+    background:white;
+    border-radius:25px;
+    box-shadow:0 15px 35px rgba(0,0,0,.07);
+    overflow:hidden;
+}
+
+.program-item{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:15px;
+    padding:25px;
+    font-size:20px;
+    color:#666;
+    letter-spacing:.5px;
+}
+
+.program-item span{
+    font-size:22px;
+}
+
+.program-item:not(:last-child){
+    border-bottom:1px solid #F3E8EA;
+}
+
+.menu a{
+    text-decoration:none;
+    color:#8b6d5c;
+    font-weight:500;
+    transition:.3s;
+    position:relative;
+}
+
+.menu a:hover{
+    color:#B88A95;
+}
+
+.menu a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0%;
+    height:2px;
+    background:#B88A95;
+    transition:.3s;
+}
+
+.menu a:hover::after{
+    width:100%;
+}
+
+section h2{
+    font-family:"Cormorant Garamond", serif;
+    font-size:58px;
+    color:#B88A95;
+    text-align:center;
+    margin-bottom:15px;
+}
+
+.card,
+.program-card,
+.venue-card,
+.time{
+
+    transition:.35s ease;
+
+}
+
+.card:hover,
+.program-card:hover,
+.venue-card:hover,
+.time:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.08);
+
+}
+
+.eighteen-subtitle{
+    max-width:700px;
+    margin:20px auto 60px;
+    text-align:center;
+    color:#777;
+    line-height:1.8;
+    font-size:18px;
+}
+
+.description{
+    text-align:center;
+    color:#777;
+    line-height:1.8;
+    margin:20px auto 35px;
+    max-width:650px;
+    font-style:italic;
+}
+
+.divider{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:15px;
+
+    margin:55px auto;
+
+    color:#c89aa3;
+
+    font-size:18px;
+
+}
+
+.divider .line{
+
+    width:90px;
+
+    height:1px;
+
+    background:linear-gradient(
+        to right,
+        transparent,
+        #d9b7bf,
+        transparent
+    );
+
+}
+
+.closing-quote{
+    margin-top:70px;
+    text-align:center;
+    color:#8b6d5c;
+    font-style:italic;
+    line-height:2;
+    font-size:20px;
+    max-width:700px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.person{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:22px 0;
+
+    border-bottom:1px solid #f2e8e8;
+
+}
+
+.person strong{
+
+    font-size:15px;
+
+    color:#B88A95;
+
+    letter-spacing:2px;
+
+    margin-bottom:8px;
+
+}
+
+.person span{
+
+    font-size:22px;
+
+    color:#555;
+
+    font-family:"Cormorant Garamond",serif;
+
+}
+
+.person small{
+
+    margin-top:8px;
+
+    color:#999;
+
+    font-size:14px;
+
+    font-style:italic;
+
+}
+
+.eighteen-card{
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:60px;
+
+    margin:60px auto;
+
+    max-width:1000px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+
+}
+
+.eighteen-card h3{
+
+text-align:center;
+
+font-size:38px;
+
+font-family:"Cormorant Garamond",serif;
+
+margin-bottom:25px;
+
+color:#B88A95;
+
+}
+
+.person{
+
+transition:.35s;
+
+}
+
+.person:hover{
+
+background:#fff9f8;
+
+border-radius:18px;
+
+transform:scale(1.01);
+
+}
+
+.roses-list{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:18px;
+    margin-top:35px;
+}
+
+.rose-btn{
+
+    width:100%;
+    padding:15px;
+    margin:10px 0;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#fff;
+
+    cursor:pointer;
+
+    font-family:'Poppins',sans-serif;
+
+    transition:all .35s ease;
+
+}
+
+.rose-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 12px 30px rgba(183,110,121,.18);
+
+}
+
+/* ---------- POPUP ---------- */
+
+.popup{
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.35);
+
+    backdrop-filter:blur(8px);
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:999;
+
+    animation:fadeIn .35s ease;
+
+}
+
+.popup-content{
+
+    animation:popupOpen .35s ease;
+    border-radius:28px;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.25);
+    background:rgba(255,255,255,.95);
+
+    backdrop-filter:blur(12px);
+
+    padding:35px 40px;
+
+    max-height:85vh;
+
+    overflow-y:auto;
+
+}
+
+.popup-content h2{
+
+font-family:"Cormorant Garamond",serif;
+
+font-size:40px;
+
+color:#B76E79;
+
+margin-bottom:10px;
+
+}
+
+.popup-content h3{
+
+font-size:28px;
+
+margin-bottom:25px;
+
+font-family:"Cormorant Garamond", serif;
 
 color:#555;
 
 }
 
-.date{
+.password-box{
 
-margin-top:20px;
+    display:flex;
 
-font-size:20px;
+    flex-direction:column;
 
-color:#777;
+    align-items:stretch;
+
+    gap:15px;
+
+    margin-top:10px;
 
 }
 
-.hero-btn{
+.password-box label{
 
-margin-top:45px;
+    font-size:15px;
 
-padding:15px 45px;
+    font-weight:600;
 
-border:none;
+    color:#777;
 
-border-radius:50px;
+    margin-left:3px;
 
-background:#B76E79;
+}
 
-color:white;
+.password-box input{
 
-font-size:18px;
+    width:100%;
+
+    padding:16px 18px;
+
+    border:1px solid #ead9dd;
+
+    border-radius:14px;
+
+    font-size:16px;
+
+    box-sizing:border-box;
+
+}
+
+.password-box input:focus{
+
+border-color:#B76E79;
+
+}
+
+.unlock-btn{
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#B76E79;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.unlock-btn:hover{
+
+background:#a95f6a;
+
+}
+
+.close{
+
+position:absolute;
+
+top:18px;
+
+right:20px;
+
+font-size:24px;
 
 cursor:pointer;
 
@@ -143,347 +988,125 @@ transition:.3s;
 
 }
 
-.hero-btn:hover{
+.close:hover{
 
-transform:scale(1.05);
+color:#B76E79;
 
-background:#a95f6a;
+transform:rotate(90deg);
 
 }
 
-.about{
+/* Birthday Wishes */
 
-padding:120px 15%;
+.wish-container{
 
-text-align:center;
+max-width:700px;
+
+margin:auto;
 
 background:white;
 
+padding:45px;
+
+border-radius:25px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
 }
 
-.about h2{
-
-font-size:50px;
+.wish-container h3{
 
 font-family:"Cormorant Garamond",serif;
 
+font-size:38px;
+
 color:#B76E79;
+
+margin-bottom:15px;
+
+}
+
+.wish-container p{
+
+color:#666;
 
 margin-bottom:30px;
 
 }
 
-.about p{
+.wish-container input,
+.wish-container textarea{
 
-max-width:750px;
+width:100%;
 
-margin:auto;
+padding:16px;
 
-line-height:2;
+margin-bottom:20px;
 
-font-size:20px;
+border:1px solid #e8d9dd;
 
-color:#666;
+border-radius:12px;
 
-}
+font-size:16px;
 
-.details{
-    padding:100px 10%;
-    background:#ffffff;
-    text-align:center;
-}
+font-family:Poppins,sans-serif;
 
-.details h2{
-    font-size:45px;
-    color:#B76E79;
-    margin-bottom:50px;
-    font-family:"Cormorant Garamond",serif;
-}
-
-.card{
-    background:#FFF9F7;
-    border-radius:20px;
-    padding:30px;
-    margin:20px auto;
-    max-width:500px;
-    box-shadow:0 8px 20px rgba(0,0,0,0.08);
-}
-
-.card h3{
-    color:#B76E79;
-    margin-bottom:10px;
-}
-
-.card p{
-    color:#555;
-}
-
-@keyframes fadeUp{
-    from{
-        opacity:0;
-        transform:translateY(30px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-.hero{
-    animation:fadeUp 1.2s ease;
-}
-
-.countdown{
-
-padding:100px 10%;
-
-text-align:center;
-
-background:white;
+outline:none;
 
 }
 
-.countdown h2{
+.wish-container input:focus,
+.wish-container textarea:focus{
 
-font-family:"Cormorant Garamond",serif;
-
-font-size:45px;
-
-color:#B76E79;
-
-margin-bottom:50px;
+border-color:#B76E79;
 
 }
 
-.countdown-box{
+.wish-btn{
 
-display:flex;
+width:100%;
 
-justify-content:center;
+padding:16px;
 
-gap:30px;
+border:none;
 
-flex-wrap:wrap;
-
-}
-
-.time{
-
-background:#FFF9F7;
-
-padding:30px;
-
-width:150px;
-
-border-radius:20px;
-
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-
-}
-
-.time h1{
-
-font-size:50px;
-
-color:#B76E79;
-
-}
-
-.time p{
-
-margin-top:10px;
-
-color:#777;
-
-}
-
-.details{
-
-padding:100px 10%;
-
-background:#FFF9F7;
-
-text-align:center;
-
-}
-
-.details h2{
-
-font-size:45px;
-
-margin-bottom:50px;
-
-color:#B76E79;
-
-font-family:"Cormorant Garamond",serif;
-
-}
-
-.cards{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-
-gap:25px;
-
-}
-
-.card{
-
-background:white;
-
-padding:35px;
-
-border-radius:20px;
-
-box-shadow:0 10px 30px rgba(0,0,0,.08);
-
-transition:.3s;
-
-}
-
-.card:hover{
-
-transform:translateY(-8px);
-
-}
-
-.card h3{
-
-margin-bottom:15px;
-
-color:#B76E79;
-
-}
-
-.card p{
-
-color:#666;
-
-}
-
-.program{
-    padding:100px 10%;
-    text-align:center;
-    background:white;
-}
-
-.program h2{
-    font-size:45px;
-    color:#B76E79;
-    margin-bottom:50px;
-    font-family:"Cormorant Garamond", serif;
-}
-
-.program-list{
-    max-width:700px;
-    margin:auto;
-}
-
-.program-item{
-    display:flex;
-    align-items:center;
-    gap:20px;
-    background:#FFF9F7;
-    margin-bottom:20px;
-    padding:20px 25px;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
-    transition:.3s;
-}
-
-.program-item:hover{
-    transform:translateX(8px);
-}
-
-.program-item span{
-    font-size:28px;
-}
-
-.program-item p{
-    font-size:18px;
-    color:#555;
-}
-
-.message{
-
-padding:100px 10%;
-
-background:#FFF9F7;
-
-text-align:center;
-
-}
-
-.message h2{
-
-font-size:45px;
-
-color:#B76E79;
-
-margin-bottom:25px;
-
-font-family:"Cormorant Garamond", serif;
-
-}
-
-.message p{
-
-max-width:600px;
-
-margin:auto;
-
-line-height:1.8;
-
-color:#666;
-
-margin-bottom:40px;
-
-}
-
-.message-btn{
-
-display:inline-block;
-
-padding:18px 40px;
+border-radius:12px;
 
 background:#B76E79;
 
 color:white;
 
-text-decoration:none;
+font-size:17px;
 
-border-radius:50px;
+cursor:pointer;
 
-transition:.3s;
-
-}
-
-.message-btn:hover{
-
-background:#a95f6a;
-
-transform:scale(1.05);
+transition:all .35s ease;
 
 }
 
-footer{
+.wish-btn:hover{
 
-padding:70px 10%;
+    transform:translateY(-4px);
 
-background:white;
-
-text-align:center;
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
 
 }
 
-footer h2{
+.letter-content{
 
-font-family:"Cormorant Garamond", serif;
+margin-top:30px;
 
-font-size:45px;
+text-align:left;
+
+animation:fadeUp .5s ease;
+
+}
+
+.letter-content h3{
+
+font-family:"Cormorant Garamond",serif;
+
+font-size:34px;
 
 color:#B76E79;
 
@@ -491,22 +1114,148 @@ margin-bottom:20px;
 
 }
 
-footer p{
+.letter-content p{
 
-max-width:650px;
+line-height:2;
 
-margin:auto;
-
-line-height:1.8;
-
-color:#666;
+color:#555;
 
 margin-bottom:30px;
 
+white-space:pre-line;
+
 }
 
-footer small{
+.letter-content textarea{
 
-color:#999;
+width:100%;
 
+padding:16px;
+
+border-radius:12px;
+
+border:1px solid #e8d9dd;
+
+margin-top:20px;
+
+resize:none;
+
+font-family:Poppins,sans-serif;
+
+}
+
+.popup-content{
+    max-height:90vh;
+    overflow-y:auto;
+}
+
+/* ===== Scroll Animation ===== */
+
+.hidden{
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s cubic-bezier(.22,1,.36,1);
+}
+
+.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+@keyframes popupOpen{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px) scale(.95);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0) scale(1);
+
+    }
+
+}
+
+/* ===== THE EIGHTEEN TITLE ===== */
+
+.details{
+
+    text-align:center;
+
+}
+
+.details h2{
+
+    display:block;
+
+    width:100%;
+
+    text-align:center;
+
+    margin:0 auto 25px;
+
+    font-size:68px;
+
+}
+
+.details p{
+
+    max-width:760px;
+
+    margin:0 auto 60px;
+
+    text-align:center;
+
+    line-height:1.9;
+
+}
+
+.eighteen-title{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.eighteen-title h2{
+    font-size:70px;
+    font-family:"Cormorant Garamond", serif;
+    color:#c08a96;
+    margin-bottom:18px;
+}
+
+.eighteen-title p{
+    max-width:760px;
+    margin:auto;
+    line-height:1.9;
+    color:#666;
+    font-size:19px;
+}
+
+.mini-divider{
+    text-align:center;
+    color:#d7a6b3;
+    letter-spacing:8px;
+    margin-bottom:20px;
+    
 }
