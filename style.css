@@ -1,9 +1,11 @@
-/* ===========================
-   LC XVIII
-   Luxury Debut Invitation
-=========================== */
+/* ==========================================
+   LC XVIII • Debut Invitation
+   Part 1
+========================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+/* ---------- RESET ---------- */
 
 *{
     margin:0;
@@ -23,124 +25,106 @@ body{
 }
 
 section{
-    padding:100px 8%;
+    padding:110px 8%;
 }
+
+/* ---------- TITLES ---------- */
 
 h2{
-    font-family:'Cormorant Garamond',serif;
-    font-size:52px;
-    color:#B7848D;
+    font-family:"Cormorant Garamond",serif;
+    font-size:58px;
+    color:#B88A95;
     text-align:center;
-    margin-bottom:60px;
+    margin-bottom:55px;
     position:relative;
+}
 
-    display:inline-block;
-
-    padding-bottom:10px;
-
-    h2::after{
-
+h2::after{
     content:"";
-
-    position:absolute;
-
-    left:50%;
-
-    transform:translateX(-50%);
-
-    bottom:0;
-
-    width:65px;
-
+    display:block;
+    width:70px;
     height:2px;
-
-    border-radius:50px;
-
-    background:linear-gradient(
-        to right,
-        transparent,
-        #d8a8b3,
-        transparent
-    );
-
-}
+    background:#D7A6B3;
+    margin:15px auto 0;
+    border-radius:20px;
 }
 
-/* ================= NAVBAR ================= */
-
-nav a{
-    position:relative;
-    text-decoration:none;
-    color:#8b6a63;
-    font-weight:500;
-    letter-spacing:2px;
-    transition:.35s;
+p{
+    line-height:1.9;
 }
 
-nav a::after{
-    content:"";
-    position:absolute;
-    left:50%;
-    bottom:-6px;
-    width:0;
-    height:1px;
-    background:#c08a96;
-    transition:.35s;
-    transform:translateX(-50%);
-}
+/* ---------- NAVBAR ---------- */
 
-nav a:hover{
-    color:#c08a96;
-}
-
-nav a:hover::after{
-    width:100%;
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 8%;
 }
 
 .logo{
-    font-family:'Cormorant Garamond',serif;
-    font-size:32px;
+    font-family:"Cormorant Garamond",serif;
+    font-size:34px;
     letter-spacing:6px;
-    color:#B7848D;
+    color:#B88A95;
 }
 
 .menu{
-
-gap:45px;
-
+    display:flex;
+    gap:40px;
 }
 
 .menu a{
-
-letter-spacing:2px;
-
-font-size:14px;
-
+    text-decoration:none;
+    color:#8B6D5C;
+    font-size:14px;
+    letter-spacing:2px;
+    position:relative;
+    transition:.35s;
 }
 
-/* ================= HERO ================= */
+.menu a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0;
+    height:2px;
+    background:#B88A95;
+    transition:.35s;
+}
+
+.menu a:hover{
+    color:#B88A95;
+}
+
+.menu a:hover::after{
+    width:100%;
+}
+
+/* ---------- HERO ---------- */
 
 .hero{
     min-height:100vh;
     display:flex;
-    flex-direction:column;
     justify-content:center;
     align-items:center;
+    flex-direction:column;
     text-align:center;
 }
 
 .chapter{
     letter-spacing:8px;
-    color:#B7848D;
     font-size:14px;
+    color:#B88A95;
     text-transform:uppercase;
 }
 
 .hero h1{
-    font-family:'Cormorant Garamond',serif;
-    font-size:88px;
-    color:#453B37;
+    font-family:"Cormorant Garamond",serif;
+    font-size:84px;
     margin:20px 0;
+    color:#453B37;
 }
 
 .tagline{
@@ -149,1113 +133,868 @@ font-size:14px;
 }
 
 .event-date{
-    margin-top:30px;
+    margin-top:28px;
     letter-spacing:2px;
     color:#8E817C;
 }
 
 .btn{
     display:inline-block;
-    margin-top:50px;
-    padding:16px 42px;
-    border:1px solid #B7848D;
+    margin-top:45px;
+    padding:15px 42px;
     border-radius:50px;
+    border:1px solid #B88A95;
+    color:#B88A95;
     text-decoration:none;
-    color:#B7848D;
-    transition:all .35s ease;
+    transition:.35s;
 }
 
 .btn:hover{
-
     transform:translateY(-5px);
-
-    box-shadow:
-    0 18px 45px rgba(0,0,0,.08);
-
+    background:#B88A95;
+    color:white;
+    box-shadow:0 15px 35px rgba(184,138,149,.20);
 }
 
-/* ================= COUNTDOWN ================= */
+/* ---------- COUNTDOWN ---------- */
 
 .countdown{
-    background:#FFFFFF;
+    background:white;
 }
 
 .countdown-box{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
-    gap:25px;
     max-width:900px;
     margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:22px;
 }
 
 .time{
     background:#FAF8F6;
-    border:1px solid #EFE6E2;
+    padding:35px;
     border-radius:22px;
-    padding:35px 20px;
     text-align:center;
     transition:.35s;
+    border:1px solid #EFE5E1;
 }
 
 .time:hover{
     transform:translateY(-8px);
-    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    box-shadow:0 18px 35px rgba(0,0,0,.08);
 }
 
 .time h3{
-    font-family:'Cormorant Garamond',serif;
-    font-size:58px;
-    color:#B7848D;
+    font-family:"Cormorant Garamond",serif;
+    font-size:60px;
+    color:#B88A95;
 }
 
 .time span{
     display:block;
     margin-top:8px;
     letter-spacing:3px;
-    text-transform:uppercase;
     font-size:13px;
     color:#8B817C;
+    text-transform:uppercase;
 }
 
-/* ================= DETAILS ================= */
+/* ==========================================
+            DETAILS
+========================================== */
 
 .details{
     background:#FAF8F6;
+    text-align:center;
+}
+
+.description{
+    max-width:760px;
+    margin:0 auto 60px;
+    color:#777;
+    font-size:18px;
+    line-height:1.9;
 }
 
 .cards{
+
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:25px;
+
 }
 
 .card{
-    background:white;
-    border-radius:22px;
-    padding:40px 25px;
-    text-align:center;
+
+    background:#fff;
+    padding:38px 30px;
+    border-radius:24px;
+    border:1px solid #EFE6E2;
     transition:.35s;
-    border:1px solid #F0E8E4;
+    box-shadow:0 8px 20px rgba(0,0,0,.03);
+
 }
 
 .card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 18px 35px rgba(0,0,0,.08);
-}
-
-.card h3{
-    font-family:'Cormorant Garamond',serif;
-    font-size:30px;
-    color:#B7848D;
-    margin-bottom:12px;
-}
-
-.card p{
-    color:#6D615B;
-    font-size:16px;
-    line-height:1.7;
-}
-
-/* ================= PROGRAM ================= */
-
-.program{
-    background:#FFFFFF;
-}
-
-.timeline{
-    max-width:700px;
-    margin:auto;
-    position:relative;
-    padding-left:30px;
-}
-
-.timeline::before{
-    content:"";
-    position:absolute;
-    left:8px;
-    top:0;
-    width:2px;
-    height:100%;
-    background:#E7D7D0;
-}
-
-.timeline div{
-    position:relative;
-    background:#FAF8F6;
-    padding:18px 25px;
-    margin-bottom:22px;
-    border-radius:18px;
-    border:1px solid #EFE5E1;
-    transition:.3s;
-}
-
-.timeline div::before{
-    content:"";
-    position:absolute;
-    left:-31px;
-    top:24px;
-    width:16px;
-    height:16px;
-    border-radius:50%;
-    background:#B7848D;
-}
-
-.timeline div:hover{
-    transform:translateX(8px);
-    box-shadow:0 15px 30px rgba(0,0,0,.08);
-}
-
-/* ================= VENUE ================= */
-
-.venue{
-    background:#FAF8F6;
-    text-align:center;
-}
-
-.venue p{
-    font-size:20px;
-    color:#6D615B;
-    margin-top:15px;
-}
-
-/* ================= MESSAGE ================= */
-
-.message{
-    background:#FFFFFF;
-    text-align:center;
-}
-
-.message p{
-    max-width:650px;
-    margin:auto;
-    color:#6D615B;
-    line-height:1.9;
-    margin-bottom:40px;
-}
-
-/* ================= FOOTER ================= */
-
-footer{
-    background:#FAF8F6;
-    text-align:center;
-    padding:80px 20px;
-    border-top:1px solid #EFE5E1;
-}
-
-footer h3{
-    font-family:'Cormorant Garamond',serif;
-    font-size:46px;
-    color:#B7848D;
-    margin-bottom:20px;
-}
-
-footer p{
-    max-width:650px;
-    margin:auto;
-    line-height:1.8;
-    color:#6D615B;
-}
-
-.copyright{
-    margin-top:35px;
-    font-size:14px;
-    letter-spacing:2px;
-    color:#9A8D87;
-}
-
-/* ================= MOBILE ================= */
-
-@media(max-width:768px){
-
-nav{
-    flex-direction:column;
-    gap:20px;
-}
-
-nav ul{
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:18px;
-}
-
-.hero h1{
-    font-size:56px;
-}
-
-.tagline{
-    font-size:18px;
-}
-
-h2{
-    font-size:38px;
-}
-
-.time h3{
-    font-size:42px;
-}
-
-}
-
-/* =======================
-        VENUE
-======================= */
-
-.venue{
-    padding:120px 10%;
-    background:#FFF9F7;
-    text-align:center;
-}
-
-.venue h2{
-    font-family:"Cormorant Garamond", serif;
-    font-size:60px;
-    color:#B88A95;
-    margin-bottom:60px;
-}
-
-.venue-card{
-    max-width:650px;
-    margin:auto;
-    background:white;
-    padding:60px;
-    border-radius:25px;
-    box-shadow:0 15px 40px rgba(0,0,0,.06);
-}
-
-.venue-card h3{
-    font-size:32px;
-    color:#5f4d4d;
-    margin-bottom:20px;
-    font-family:"Cormorant Garamond", serif;
-}
-
-.venue-card p{
-    color:#777;
-    line-height:1.9;
-    font-size:18px;
-}
-
-.venue-note{
-    margin-top:30px;
-    letter-spacing:3px;
-    text-transform:uppercase;
-    color:#B88A95;
-    font-size:15px;
-}
-
-/* =======================
-      BIRTHDAY WISHES
-======================= */
-
-.message{
-    padding:120px 10%;
-    background:#ffffff;
-    text-align:center;
-}
-
-.message h2{
-    font-family:"Cormorant Garamond", serif;
-    font-size:60px;
-    color:#B88A95;
-    margin-bottom:25px;
-}
-
-.message p{
-    max-width:650px;
-    margin:auto;
-    color:#777;
-    font-size:18px;
-    line-height:1.9;
-    margin-bottom:45px;
-}
-
-.wish-btn{
-    display:inline-block;
-    padding:16px 45px;
-    border:1px solid #C9A3AE;
-    border-radius:50px;
-    text-decoration:none;
-    color:#B88A95;
-    letter-spacing:2px;
-    text-transform:uppercase;
-    transition:.35s;
-}
-
-.wish-btn:hover{
-    background:#B88A95;
-    color:white;
-    transform:translateY(-3px);
-    box-shadow:0 10px 25px rgba(184,138,149,.25);
-}
-
-/* =======================
-          FOOTER
-======================= */
-
-footer{
-    padding:100px 10%;
-    background:#FFF9F7;
-    text-align:center;
-}
-
-footer h2{
-    font-family:"Cormorant Garamond", serif;
-    font-size:55px;
-    color:#B88A95;
-    margin-bottom:25px;
-}
-
-footer p{
-    max-width:650px;
-    margin:auto;
-    color:#777;
-    line-height:1.9;
-    margin-bottom:35px;
-}
-
-.divider{
-    width:90px;
-    height:1px;
-    background:#D8B8C0;
-    margin:35px auto;
-}
-
-footer small{
-    color:#999;
-    letter-spacing:2px;
-    line-height:2;
-}
-
-footer strong{
-    color:#B88A95;
-    font-size:18px;
-}
-
-.program{
-    padding:120px 10%;
-    background:#ffffff;
-    text-align:center;
-}
-
-.program h2{
-    font-size:60px;
-    font-family:"Cormorant Garamond",serif;
-    color:#BE8F95;
-    margin-bottom:10px;
-}
-
-.program-divider{
-    color:#D6A5AD;
-    letter-spacing:8px;
-    font-size:18px;
-    margin-bottom:40px;
-}
-
-.program-card{
-    max-width:650px;
-    margin:auto;
-    background:white;
-    border-radius:25px;
-    box-shadow:0 15px 35px rgba(0,0,0,.07);
-    overflow:hidden;
-}
-
-.program-item{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:15px;
-    padding:25px;
-    font-size:20px;
-    color:#666;
-    letter-spacing:.5px;
-}
-
-.program-item span{
-    font-size:22px;
-}
-
-.program-item:not(:last-child){
-    border-bottom:1px solid #F3E8EA;
-}
-
-.menu a{
-    text-decoration:none;
-    color:#8b6d5c;
-    font-weight:500;
-    transition:.3s;
-    position:relative;
-}
-
-.menu a:hover{
-    color:#B88A95;
-}
-
-.menu a::after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:-6px;
-    width:0%;
-    height:2px;
-    background:#B88A95;
-    transition:.3s;
-}
-
-.menu a:hover::after{
-    width:100%;
-}
-
-section h2{
-    font-family:"Cormorant Garamond", serif;
-    font-size:58px;
-    color:#B88A95;
-    text-align:center;
-    margin-bottom:15px;
-}
-
-.card,
-.program-card,
-.venue-card,
-.time{
-
-    transition:.35s ease;
-
-}
-
-.card:hover,
-.program-card:hover,
-.venue-card:hover,
-.time:hover{
 
     transform:translateY(-8px);
-
     box-shadow:0 20px 40px rgba(0,0,0,.08);
 
 }
 
-.eighteen-subtitle{
-    max-width:700px;
-    margin:20px auto 60px;
-    text-align:center;
-    color:#777;
-    line-height:1.8;
-    font-size:18px;
-}
+.card h3{
 
-.description{
-    text-align:center;
-    color:#777;
-    line-height:1.8;
-    margin:20px auto 35px;
-    max-width:650px;
-    font-style:italic;
-}
-
-.divider{
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    gap:15px;
-
-    margin:55px auto;
-
-    color:#c89aa3;
-
-    font-size:18px;
-
-}
-
-.divider .line{
-
-    width:90px;
-
-    height:1px;
-
-    background:linear-gradient(
-        to right,
-        transparent,
-        #d9b7bf,
-        transparent
-    );
-
-}
-
-.closing-quote{
-    margin-top:70px;
-    text-align:center;
-    color:#8b6d5c;
-    font-style:italic;
-    line-height:2;
-    font-size:20px;
-    max-width:700px;
-    margin-left:auto;
-    margin-right:auto;
-}
-
-.person{
-
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:center;
-
-    text-align:center;
-
-    padding:22px 0;
-
-    border-bottom:1px solid #f2e8e8;
-
-}
-
-.person strong{
-
-    font-size:15px;
-
+    font-family:"Cormorant Garamond",serif;
+    font-size:32px;
     color:#B88A95;
-
-    letter-spacing:2px;
-
-    margin-bottom:8px;
+    margin-bottom:15px;
 
 }
 
-.person span{
+.card p{
+
+    color:#666;
+    font-size:16px;
+    line-height:1.8;
+
+}
+
+/* ==========================================
+            PROGRAM
+========================================== */
+
+.program{
+
+    background:white;
+    text-align:center;
+
+}
+
+.program-card{
+
+    max-width:700px;
+    margin:auto;
+    border-radius:25px;
+    overflow:hidden;
+    background:white;
+    box-shadow:0 15px 35px rgba(0,0,0,.07);
+
+}
+
+.program-item{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+    padding:22px;
+    font-size:18px;
+    color:#666;
+    border-bottom:1px solid #F2E8EA;
+    transition:.35s;
+
+}
+
+.program-item:last-child{
+
+    border-bottom:none;
+
+}
+
+.program-item:hover{
+
+    background:#FFF8F9;
+
+}
+
+.program-item span{
 
     font-size:22px;
 
-    color:#555;
-
-    font-family:"Cormorant Garamond",serif;
-
 }
 
-.person small{
-
-    margin-top:8px;
-
-    color:#999;
-
-    font-size:14px;
-
-    font-style:italic;
-
-}
+/* ==========================================
+            18 ROSES
+========================================== */
 
 .eighteen-card{
 
-    background:white;
+    background:#fff;
 
-    border-radius:25px;
+    max-width:1100px;
 
-    padding:60px;
+    margin:70px auto;
 
-    margin:60px auto;
+    padding:70px 65px;
 
-    max-width:1000px;
+    border-radius:28px;
 
-    box-shadow:0 10px 30px rgba(0,0,0,.06);
-
-}
-
-.eighteen-card h3{
-
-text-align:center;
-
-font-size:38px;
-
-font-family:"Cormorant Garamond",serif;
-
-margin-bottom:25px;
-
-color:#B88A95;
+    box-shadow:0 15px 40px rgba(0,0,0,.06);
 
 }
 
-.person{
+.eighteen-title{
 
-transition:.35s;
+    text-align:center;
+
+    margin-bottom:60px;
 
 }
 
-.person:hover{
+.eighteen-title h2{
 
-background:#fff9f8;
+    font-size:68px;
 
-border-radius:18px;
+    margin-bottom:20px;
 
-transform:scale(1.01);
+}
+
+.eighteen-title p{
+
+    max-width:620px;
+
+    margin:auto;
+
+    font-size:18px;
+
+    line-height:2;
+
+    color:#777;
 
 }
 
 .roses-list{
+
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:18px;
-    margin-top:35px;
+
+    .roses-list{
+
+    grid-template-columns:1fr;
+
+    gap:0;
+
+}
+
+    margin-top:45px;
+
 }
 
 .rose-btn{
 
-    width:100%;
-    padding:15px;
-    margin:10px 0;
-
-    border:none;
-
-    border-radius:12px;
-
-    background:#fff;
-
+    background:white;
+    border:1px solid #F0E4E7;
+    border-radius:18px;
+    padding:18px;
     cursor:pointer;
-
+    transition:.35s;
     font-family:'Poppins',sans-serif;
-
-    transition:all .35s ease;
 
 }
 
 .rose-btn:hover{
 
-    transform:translateY(-4px);
-
-    box-shadow:0 12px 30px rgba(183,110,121,.18);
-
-}
-
-/* ---------- POPUP ---------- */
-
-.popup{
-
-    display:none;
-
-    position:fixed;
-
-    inset:0;
-
-    background:rgba(0,0,0,.35);
-
-    backdrop-filter:blur(8px);
-
-    justify-content:center;
-
-    align-items:center;
-
-    z-index:999;
-
-    animation:fadeIn .35s ease;
+    transform:translateY(-5px);
+    box-shadow:0 15px 30px rgba(183,110,121,.18);
+    border-color:#DDB6BF;
 
 }
 
-.popup-content{
-
-    animation:popupOpen .35s ease;
-    border-radius:28px;
-
-    box-shadow:0 25px 60px rgba(0,0,0,.25);
-    background:rgba(255,255,255,.95);
-
-    backdrop-filter:blur(12px);
-
-    padding:35px 40px;
-
-    max-height:85vh;
-
-    overflow-y:auto;
-
-}
-
-.popup-content h2{
-
-font-family:"Cormorant Garamond",serif;
-
-font-size:40px;
-
-color:#B76E79;
-
-margin-bottom:10px;
-
-}
-
-.popup-content h3{
-
-font-size:28px;
-
-margin-bottom:25px;
-
-font-family:"Cormorant Garamond", serif;
-
-color:#555;
-
-}
-
-.password-box{
-
+.person{
     display:flex;
-
     flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
 
-    align-items:stretch;
+    padding:38px 20px;
+    margin:0;
 
-    gap:15px;
+    border-bottom:1px solid #F2E8EA;
 
-    margin-top:10px;
-
+    transition:.35s ease;
 }
 
-.password-box label{
+.person:hover{
+    background:#FFF9F8;
+}
 
-    font-size:15px;
+.person strong{
+    display:block;
+
+    font-size:13px;
+    letter-spacing:4px;
+
+    color:#C59AA4;
+
+    margin-bottom:12px;
 
     font-weight:600;
-
-    color:#777;
-
-    margin-left:3px;
-
 }
 
-.password-box input{
+.person span{
+    font-family:"Cormorant Garamond",serif;
 
+    font-size:25px;
+
+    color:#555;
+
+    line-height:1.35;
+
+    margin-bottom:8px;
+}
+
+.person small{
+    color:#999;
+
+    font-size:13px;
+
+    font-style:italic;
+}
+
+/* ==========================================
+              VENUE
+========================================== */
+
+.venue{
+    background:#FFF9F7;
+    text-align:center;
+}
+
+.venue-card{
     width:100%;
-
-    padding:16px 18px;
-
-    border:1px solid #ead9dd;
-
-    border-radius:14px;
-
-    font-size:16px;
-
-    box-sizing:border-box;
-
+    max-width:680px;
+    margin:auto;
+    padding:55px 45px;
+    background:#fff;
+    border-radius:28px;
+    box-shadow:0 18px 40px rgba(0,0,0,.06);
+    transition:.35s;
 }
 
-.password-box input:focus{
-
-border-color:#B76E79;
-
+.venue-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 25px 50px rgba(0,0,0,.08);
 }
 
-.unlock-btn{
-
-    width:100%;
-
-    padding:16px;
-
-    border:none;
-
-    border-radius:14px;
-
-    background:#B76E79;
-
-    color:white;
-
-    font-size:16px;
-
-    font-weight:600;
-
-    cursor:pointer;
-
-    transition:.3s;
-
+.venue-card h3{
+    font-family:"Cormorant Garamond",serif;
+    font-size:34px;
+    color:#B88A95;
+    margin-bottom:18px;
 }
 
-.unlock-btn:hover{
-
-background:#a95f6a;
-
+.venue-card p{
+    color:#666;
+    font-size:18px;
+    line-height:1.9;
+    white-space:normal;
+    overflow-wrap:anywhere;
 }
 
-.close{
-
-position:absolute;
-
-top:18px;
-
-right:20px;
-
-font-size:24px;
-
-cursor:pointer;
-
-transition:.3s;
-
+.venue-note{
+    margin-top:28px;
+    color:#B88A95;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    font-size:14px;
 }
 
-.close:hover{
-
-color:#B76E79;
-
-transform:rotate(90deg);
-
-}
-
-/* Birthday Wishes */
+/* ==========================================
+            BIRTHDAY WISHES
+========================================== */
 
 .wish-container{
 
-max-width:700px;
-
-margin:auto;
-
-background:white;
-
-padding:45px;
-
-border-radius:25px;
-
-box-shadow:0 10px 30px rgba(0,0,0,.08);
+    max-width:720px;
+    margin:auto;
+    padding:55px;
+    background:white;
+    border-radius:28px;
+    text-align:center;
+    box-shadow:0 15px 35px rgba(0,0,0,.06);
 
 }
 
 .wish-container h3{
 
-font-family:"Cormorant Garamond",serif;
-
-font-size:38px;
-
-color:#B76E79;
-
-margin-bottom:15px;
+    font-family:"Cormorant Garamond",serif;
+    font-size:42px;
+    color:#B88A95;
+    margin-bottom:18px;
 
 }
 
 .wish-container p{
 
-color:#666;
-
-margin-bottom:30px;
-
-}
-
-.wish-container input,
-.wish-container textarea{
-
-width:100%;
-
-padding:16px;
-
-margin-bottom:20px;
-
-border:1px solid #e8d9dd;
-
-border-radius:12px;
-
-font-size:16px;
-
-font-family:Poppins,sans-serif;
-
-outline:none;
-
-}
-
-.wish-container input:focus,
-.wish-container textarea:focus{
-
-border-color:#B76E79;
+    color:#777;
+    line-height:1.9;
+    margin-bottom:35px;
 
 }
 
 .wish-btn{
 
-width:100%;
-
-padding:16px;
-
-border:none;
-
-border-radius:12px;
-
-background:#B76E79;
-
-color:white;
-
-font-size:17px;
-
-cursor:pointer;
-
-transition:all .35s ease;
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    width:auto;
+    padding:16px 38px;
+    border:none;
+    border-radius:50px;
+    background:#B88A95;
+    color:white;
+    text-decoration:none;
+    cursor:pointer;
+    transition:.35s;
 
 }
 
 .wish-btn:hover{
 
-    transform:translateY(-4px);
-
-    box-shadow:0 10px 20px rgba(0,0,0,.15);
+    transform:translateY(-5px);
+    box-shadow:0 15px 30px rgba(184,138,149,.25);
 
 }
 
+/* ==========================================
+               FOOTER
+========================================== */
+
+footer{
+
+    background:#FFF9F7;
+    text-align:center;
+
+}
+
+footer h2{
+
+    font-size:58px;
+    margin-bottom:20px;
+
+}
+
+footer p{
+
+    max-width:680px;
+    margin:auto;
+    color:#777;
+    line-height:1.9;
+
+}
+
+.divider{
+
+    width:90px;
+    height:2px;
+    background:#DAB6BF;
+    margin:35px auto;
+    border-radius:20px;
+
+}
+
+footer small{
+
+    display:block;
+    color:#999;
+    line-height:2;
+
+}
+
+footer strong{
+
+    color:#B88A95;
+    font-size:18px;
+
+}
+
+/* ==========================================
+                POPUP
+========================================== */
+
+.popup{
+
+    position:fixed;
+    inset:0;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    background:rgba(0,0,0,.35);
+    backdrop-filter:blur(10px);
+    z-index:999;
+
+}
+
+.popup-content{
+
+    position:relative;
+    width:min(92%,750px);
+    max-height:88vh;
+    overflow-y:auto;
+    background:white;
+    border-radius:28px;
+    padding:38px;
+    box-shadow:0 25px 60px rgba(0,0,0,.20);
+    animation:popupOpen .35s ease;
+    scrollbar-width:thin;
+    scrollbar-color:#d8a8b3 transparent;
+}
+
+.popup-content h2{
+
+    font-size:42px;
+    margin-bottom:10px;
+
+}
+
+.popup-content h3{
+
+    font-size:30px;
+    color:#555;
+    margin-bottom:22px;
+
+}
+
+.close{
+
+    position:absolute;
+    right:22px;
+    top:18px;
+    font-size:28px;
+    cursor:pointer;
+    transition:.35s;
+
+}
+
+.close:hover{
+
+    color:#B88A95;
+    transform:rotate(90deg);
+
+}
+
+/* ==========================================
+             PASSWORD BOX
+========================================== */
+
+.password-box{
+
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+
+}
+
+.password-box label{
+
+    color:#777;
+    font-size:15px;
+
+}
+
+.password-box input{
+
+    padding:15px;
+    border-radius:14px;
+    border:1px solid #EADADF;
+    font-size:16px;
+
+}
+
+.password-box input:focus{
+
+    outline:none;
+    border-color:#B88A95;
+
+}
+
+.unlock-btn{
+
+    padding:15px;
+    border:none;
+    border-radius:14px;
+    background:#B88A95;
+    color:white;
+    cursor:pointer;
+    transition:.35s;
+
+}
+
+.unlock-btn:hover{
+
+    background:#A96E7A;
+
+}
+
+/* ==========================================
+              LETTER
+========================================== */
+
 .letter-content{
 
-margin-top:30px;
-
-text-align:left;
-
-animation:fadeUp .5s ease;
+    margin-top:30px;
+    animation:fadeUp .5s ease;
 
 }
 
 .letter-content h3{
 
-font-family:"Cormorant Garamond",serif;
-
-font-size:34px;
-
-color:#B76E79;
-
-margin-bottom:20px;
+    font-size:34px;
+    color:#B88A95;
+    margin-bottom:20px;
 
 }
 
 .letter-content p{
 
-line-height:2;
-
-color:#555;
-
-margin-bottom:30px;
-
-white-space:pre-line;
+    color:#555;
+    line-height:2;
+    white-space:pre-line;
 
 }
 
-.letter-content textarea{
+.reply-note{
 
-width:100%;
-
-padding:16px;
-
-border-radius:12px;
-
-border:1px solid #e8d9dd;
-
-margin-top:20px;
-
-resize:none;
-
-font-family:Poppins,sans-serif;
+    margin:25px 0;
+    color:#777;
+    line-height:1.9;
 
 }
 
-.popup-content{
-    max-height:90vh;
-    overflow-y:auto;
-}
-
-/* ===== Scroll Animation ===== */
+/* ==========================================
+          ANIMATIONS
+========================================== */
 
 .hidden{
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 1s cubic-bezier(.22,1,.36,1);
+    opacity:0;
+    transform:translateY(35px);
+    transition:all .8s ease;
 }
 
 .show{
-    opacity: 1;
-    transform: translateY(0);
+    opacity:1;
+    transform:translateY(0);
 }
 
-@keyframes fadeIn{
-
+@keyframes fadeUp{
     from{
-
         opacity:0;
-
+        transform:translateY(20px);
     }
-
     to{
-
         opacity:1;
-
+        transform:translateY(0);
     }
-
 }
 
 @keyframes popupOpen{
-
     from{
-
         opacity:0;
-
         transform:translateY(20px) scale(.95);
-
     }
-
     to{
-
         opacity:1;
-
         transform:translateY(0) scale(1);
+    }
+}
 
+/* ==========================================
+        MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width:768px){
+
+    html{
+        overflow-x:hidden;
+    }
+
+    body{
+        overflow-x:hidden;
+    }
+
+    section{
+        padding:70px 20px;
+    }
+
+    /* ---------- NAV ---------- */
+
+    nav{
+        flex-direction:column;
+        gap:20px;
+        text-align:center;
+    }
+
+    .menu{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:18px;
+    }
+
+    .logo{
+        font-size:28px;
+    }
+
+    /* ---------- HERO ---------- */
+
+    .hero{
+        padding:40px 20px;
+    }
+
+    .hero h1{
+        font-size:58px;
+        line-height:1.1;
+    }
+
+    .tagline{
+        font-size:18px;
+    }
+
+    .chapter{
+        letter-spacing:5px;
+        font-size:12px;
+    }
+
+    .btn{
+        width:100%;
+        max-width:280px;
+    }
+
+    /* ---------- TITLES ---------- */
+
+    h2{
+        font-size:40px;
+        margin-bottom:35px;
+    }
+
+    /* ---------- COUNTDOWN ---------- */
+
+    .countdown-box{
+        grid-template-columns:repeat(2,1fr);
+        gap:15px;
+    }
+
+    .time{
+        padding:25px 15px;
+    }
+
+    .time h3{
+        font-size:40px;
+    }
+
+    /* ---------- CARDS ---------- */
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .card{
+        padding:30px 22px;
+    }
+
+    /* ---------- PROGRAM ---------- */
+
+    .program-card{
+        width:100%;
+    }
+
+    .program-item{
+        font-size:16px;
+        padding:18px;
+    }
+
+    /* ---------- 18 ROSES ---------- */
+
+    .eighteen-card{
+        padding:30px 20px;
+    }
+
+    .eighteen-title h2{
+        font-size:42px;
+    }
+
+    .eighteen-title p{
+        font-size:16px;
+    }
+
+    .roses-list{
+        grid-template-columns:1fr;
+    }
+
+    /* ---------- VENUE ---------- */
+
+    .venue-card{
+        padding:30px 22px;
+    }
+
+    .venue-card h3{
+        font-size:28px;
+    }
+
+    .venue-card p{
+        font-size:16px;
+        line-height:1.8;
+        white-space:normal;
+        word-break:normal;
+        overflow-wrap:anywhere;
+    }
+
+    .venue-note{
+        letter-spacing:1px;
+        font-size:13px;
+    }
+
+    /* ---------- WISHES ---------- */
+
+    .wish-container{
+        padding:30px 22px;
+    }
+
+    .wish-container h3{
+        font-size:34px;
+    }
+
+    .wish-btn{
+        width:100%;
+    }
+
+    /* ---------- POPUP ---------- */
+
+    .popup-content{
+        width:94%;
+        padding:28px 20px;
+        border-radius:20px;
+    }
+
+    .popup-content h2{
+        font-size:34px;
+    }
+
+    .popup-content h3{
+        font-size:24px;
+    }
+
+    .letter-content h3{
+        font-size:28px;
+    }
+
+    .letter-content p{
+        font-size:15px;
+    }
+
+    /* ---------- FOOTER ---------- */
+
+    footer h2{
+        font-size:42px;
+    }
+
+    footer p{
+        font-size:16px;
     }
 
 }
 
-/* ===== THE EIGHTEEN TITLE ===== */
-
-.details{
-
-    text-align:center;
-
-}
-
-.details h2{
-
+img{
+    max-width:100%;
+    height:auto;
     display:block;
-
-    width:100%;
-
-    text-align:center;
-
-    margin:0 auto 25px;
-
-    font-size:68px;
-
-}
-
-.details p{
-
-    max-width:760px;
-
-    margin:0 auto 60px;
-
-    text-align:center;
-
-    line-height:1.9;
-
-}
-
-.eighteen-title{
-    text-align:center;
-    margin-bottom:25px;
-}
-
-.eighteen-title h2{
-    font-size:70px;
-    font-family:"Cormorant Garamond", serif;
-    color:#c08a96;
-    margin-bottom:18px;
-}
-
-.eighteen-title p{
-    max-width:760px;
-    margin:auto;
-    line-height:1.9;
-    color:#666;
-    font-size:19px;
-}
-
-.mini-divider{
-    text-align:center;
-    color:#d7a6b3;
-    letter-spacing:8px;
-    margin-bottom:20px;
-    
 }
